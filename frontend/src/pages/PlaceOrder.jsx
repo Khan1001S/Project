@@ -27,7 +27,7 @@ const PlaceOrder = () => {
         const value = event.target.value
         setFormData(data => ({ ...data, [name]: value }))
     }
-
+ /*
     const initPay = (order) => {
         const options = {
             key: import.meta.env.VITE_RAZORPAY_KEY_ID,
@@ -54,7 +54,7 @@ const PlaceOrder = () => {
         }
         const rzp = new window.Razorpay(options)
         rzp.open()
-    }
+    } */
 
     const onSubmitHandler = async (event) => {
         event.preventDefault()
@@ -94,7 +94,8 @@ const PlaceOrder = () => {
                         toast.error(response.data.message)
                     }
                     break;
-
+                    
+                /*
                 case 'stripe':
                     const responseStripe = await axios.post(backendUrl + '/api/order/stripe',orderData,{headers:{token}})
                     if (responseStripe.data.success) {
@@ -112,7 +113,7 @@ const PlaceOrder = () => {
                         initPay(responseRazorpay.data.order)
                     }
 
-                    break;
+                    break; */
 
                 default:
                     break;
