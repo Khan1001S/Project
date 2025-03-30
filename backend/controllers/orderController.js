@@ -1,7 +1,7 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
-import Stripe from 'stripe'
-import razorpay from 'razorpay'
+//import Stripe from 'stripe'
+//import razorpay from 'razorpay'
 
 // global variables
 const currency = 'inr'
@@ -235,4 +235,4 @@ const updateStatus = async (req,res) => {
     }
 }
 
-export {verifyRazorpay, verifyStripe ,placeOrder, placeOrderStripe, placeOrderRazorpay, allOrders, userOrders, updateStatus}
+export {placeOrder, allOrders, userOrders, updateStatus}
